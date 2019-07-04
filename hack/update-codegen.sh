@@ -21,15 +21,18 @@ set -o pipefail
 SCRIPT_ROOT=$(dirname ${BASH_SOURCE})/..
 CODEGEN_PKG=${CODEGEN_PKG:-$(cd ${SCRIPT_ROOT}; ls -d -1 ./vendor/k8s.io/code-generator 2>/dev/null || echo ../code-generator)}
 
+
+echo "BASH SOURCE = ${BASH_SOURCE}"
+
 # generate the code with:
 # --output-base    because this script should also be able to run inside the vendor dir of
 #                  k8s.io/kubernetes. The output-base is needed for the generators to output into the vendor dir
 #                  instead of the $GOPATH directly. For normal projects this can be dropped.
 ${CODEGEN_PKG}/generate-groups.sh "all" \
-  github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/client github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/apis \
+  github.com/zlgonzalez/spark-on-k8s-operator/pkg/client github.com/zlgonzalez/spark-on-k8s-operator/pkg/apis \
   sparkoperator.k8s.io:v1alpha1,v1beta1 \
   --go-header-file "$(dirname ${BASH_SOURCE})/custom-boilerplate.go.txt" \
-  --output-base "$(dirname ${BASH_SOURCE})/../../../.."
+  --output-base "$(dirname ${BASH_SOURCE})/../vendor"
 
 # To use your own boilerplate text append:
 #   --go-header-file ${SCRIPT_ROOT}/hack/custom-boilerplate.go.txt

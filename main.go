@@ -37,16 +37,16 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 
-	crclientset "github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/client/clientset/versioned"
-	crinformers "github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/client/informers/externalversions"
-	operatorConfig "github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/config"
-	"github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/controller/scheduledsparkapplication"
-	"github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/controller/sparkapplication"
-	"github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/crd"
-	ssacrd "github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/crd/scheduledsparkapplication"
-	sacrd "github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/crd/sparkapplication"
-	"github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/util"
-	"github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/webhook"
+	crclientset "github.com/zlgonzalez/spark-on-k8s-operator/pkg/client/clientset/versioned"
+	crinformers "github.com/zlgonzalez/spark-on-k8s-operator/pkg/client/informers/externalversions"
+	operatorConfig "github.com/zlgonzalez/spark-on-k8s-operator/pkg/config"
+	"github.com/zlgonzalez/spark-on-k8s-operator/pkg/controller/scheduledsparkapplication"
+	"github.com/zlgonzalez/spark-on-k8s-operator/pkg/controller/sparkapplication"
+	"github.com/zlgonzalez/spark-on-k8s-operator/pkg/crd"
+	ssacrd "github.com/zlgonzalez/spark-on-k8s-operator/pkg/crd/scheduledsparkapplication"
+	sacrd "github.com/zlgonzalez/spark-on-k8s-operator/pkg/crd/sparkapplication"
+	"github.com/zlgonzalez/spark-on-k8s-operator/pkg/util"
+	"github.com/zlgonzalez/spark-on-k8s-operator/pkg/webhook"
 )
 
 var (

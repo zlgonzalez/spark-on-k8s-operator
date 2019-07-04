@@ -1,5 +1,5 @@
 /*
-Copyright 2018 Google LLC
+Copyright 2017 Google LLC
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,23 +14,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package scheduledsparkapplication
+//go:generate hack/update-codegen.sh
+
+package main
 
 import (
-	"github.com/zlgonzalez/spark-on-k8s-operator/pkg/apis/sparkoperator.k8s.io/v1beta1"
+ 	_ "k8s.io/code-generator"
 )
 
-type sparkApps []*v1beta1.SparkApplication
-
-func (s sparkApps) Len() int {
-	return len(s)
-}
-
-func (s sparkApps) Swap(i, j int) {
-	s[i], s[j] = s[j], s[i]
-}
-
-func (s sparkApps) Less(i, j int) bool {
-	// Sort by decreasing order of application names and correspondingly creation time.
-	return s[i].Name > s[j].Name
-}

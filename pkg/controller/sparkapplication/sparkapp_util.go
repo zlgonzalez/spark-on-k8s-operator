@@ -19,8 +19,8 @@ package sparkapplication
 import (
 	"fmt"
 
-	"github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/apis/sparkoperator.k8s.io/v1beta1"
-	"github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/config"
+	"github.com/zlgonzalez/spark-on-k8s-operator/pkg/apis/sparkoperator.k8s.io/v1beta1"
+	"github.com/zlgonzalez/spark-on-k8s-operator/pkg/config"
 	apiv1 "k8s.io/api/core/v1"
 )
 

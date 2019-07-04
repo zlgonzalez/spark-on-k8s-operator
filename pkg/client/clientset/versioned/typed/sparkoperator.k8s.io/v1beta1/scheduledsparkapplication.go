@@ -23,8 +23,8 @@ package v1beta1
 import (
 	"time"
 
-	v1beta1 "github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/apis/sparkoperator.k8s.io/v1beta1"
-	scheme "github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/client/clientset/versioned/scheme"
+	v1beta1 "github.com/zlgonzalez/spark-on-k8s-operator/pkg/apis/sparkoperator.k8s.io/v1beta1"
+	scheme "github.com/zlgonzalez/spark-on-k8s-operator/pkg/client/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"

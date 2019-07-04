@@ -36,10 +36,10 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 
-	crinformers "github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/client/informers/externalversions"
-	crdlisters "github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/client/listers/sparkoperator.k8s.io/v1beta1"
-	"github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/config"
-	"github.com/GoogleCloudPlatform/spark-on-k8s-operator/pkg/util"
+	crinformers "github.com/zlgonzalez/spark-on-k8s-operator/pkg/client/informers/externalversions"
+	crdlisters "github.com/zlgonzalez/spark-on-k8s-operator/pkg/client/listers/sparkoperator.k8s.io/v1beta1"
+	"github.com/zlgonzalez/spark-on-k8s-operator/pkg/config"
+	"github.com/zlgonzalez/spark-on-k8s-operator/pkg/util"
 )
 
 const (

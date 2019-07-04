@@ -30,7 +30,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/kubernetes/pkg/kubectl/describe"
 
-	appFramework "github.com/GoogleCloudPlatform/spark-on-k8s-operator/test/e2e/framework"
+	appFramework "github.com/zlgonzalez/spark-on-k8s-operator/test/e2e/framework"
 )
 
 type describeClient struct {
